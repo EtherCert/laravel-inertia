@@ -9,8 +9,12 @@ class Skill extends Model
 {
     use HasFactory;
     protected $fillable = ['name', 'image'];
+    protected $appends = ['image_url'];
 
     public function projects(){
         return $this->hasMany(Project::class);
+    }
+    public function getImageUrlAttribute(){
+        return asset('storage/'.$this->image);
     }
 }
