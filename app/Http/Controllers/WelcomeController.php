@@ -16,4 +16,5 @@ class WelcomeController extends Controller
       $projects = ProjectResource::collection(Project::with('skill')->get());
       return Inertia::render('Welcome', compact(['skills' , 'projects']));
   }
+
 }

@@ -17,7 +17,7 @@ use Inertia\Inertia;
 */
 
 Route::get('/', 'WelcomeController@welcome')->name('welcome');
-
+Route::post('/contact', 'ContactController')->name('contact');
 Route::middleware(['auth', 'verified'])->group( function(){
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');

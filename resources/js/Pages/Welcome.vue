@@ -6,6 +6,8 @@ import Promote from "@/Components/Frontend/Promote.vue";
 import About from "@/Components/Frontend/About.vue";
 import Skills from "@/Components/Frontend/Skills.vue";
 import Portfolio from "@/Components/Frontend/Portfolio.vue";
+import Services from "@/Components/Frontend/Services.vue";
+import ContactMe from "@/Components/Frontend/ContactMe.vue";
 
 defineProps({
     skills : Object,
@@ -27,6 +29,8 @@ defineProps({
         <!-- Portfolio primary -->
         <Portfolio  :skills="skills" :projects="projects" />
         <!-- Services secondary -->
+        <Services />
         <!-- Contact primary -->
+        <ContactMe />
     </FooterLayout>
 </template>
